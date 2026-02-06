@@ -76,7 +76,7 @@ const Footer = () => {
               >
                 <MapPin size={18} className="mr-2 mt-1" />
                 <span>
-                  <span itemProp="streetAddress">Piazza Dottor Emilio Gallavresi, 6</span>
+                  <span itemProp="streetAddress">Via al Teatro, 6</span>
                   <br />
                   <span itemProp="postalCode">24043</span>{' '}
                   <span itemProp="addressLocality">Caravaggio</span>{' '}

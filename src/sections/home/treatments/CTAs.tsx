@@ -125,7 +125,7 @@ const CTAs = () => {
             <div className="aspect-video w-full">
               <blockquote
                 className="instagram-media w-full"
-                data-instgrm-permalink="https://www.instagram.com/p/DQCsfOvjMsq/"
+                data-instgrm-permalink="https://www.instagram.com/giuliaepietroacconciature/"
                 data-instgrm-version="14"
                 style={{ margin: '0 auto', width: '100%', maxWidth: '100%' }}
               />

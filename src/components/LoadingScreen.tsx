@@ -21,7 +21,7 @@ const LoadingScreen = () => {
       >
         <img
           src={logo}
-          alt="Epifanio Di Giovanni Logo"
+          alt="Giulia & Pietro Acconciature Unisex Logo"
           className="max-w-xs md:max-w-md"
         />
       </div>

@@ -94,14 +94,14 @@ const timezoneGateway = createSupabaseTimezoneGateway(supabase);
 // Service Selection Config
 const serviceConfig = {
   seoConfig: {
-    title: "Scegli un servizio | La tua attività",
+    title: "Scegli un servizio | Giulia & Pietro Acconciature Unisex",
     canonical: "https://epifaniodigiovanni.it/prenotazione/servizi",
     description: "Seleziona il servizio che vuoi prenotare.",
   },
   schemaConfig: {
-    businessName: "Nome della tua attività",
+    businessName: "Giulia & Pietro Acconciature Unisex",
     businessType: "ProfessionalService",
-    locality: "La tua città",
+    locality: "Caravaggio",
     country: "IT",
   },
   pageText: {
@@ -115,7 +115,7 @@ const serviceConfig = {
 // Staff Selection Config
 const staffConfig = {
   seoConfig: {
-    title: "Scegli lo staff | La tua attività",
+    title: "Scegli lo staff | Giulia & Pietro Acconciature Unisex",
     canonical: "https://epifaniodigiovanni.it/prenotazione/staff",
     description: "Seleziona il membro dello staff preferito.",
   },
@@ -130,7 +130,7 @@ const staffConfig = {
 // Time Slot Selection Config
 const slotConfig = {
   seoConfig: {
-    title: "Scegli data e orario | La tua attività",
+    title: "Scegli data e orario | Giulia & Pietro Acconciature Unisex",
     canonical: "https://epifaniodigiovanni.it/prenotazione/orari",
     description: "Seleziona la data e l'orario preferiti.",
   },
@@ -170,7 +170,7 @@ const successConfig = {
     homeButtonText: "TORNA ALLA HOME",
     callButtonText: "CHIAMACI",
   },
-  phoneNumber: "1234567890",
+  phoneNumber: "3339347932",
   dateLocale: "it-IT",
 };
 

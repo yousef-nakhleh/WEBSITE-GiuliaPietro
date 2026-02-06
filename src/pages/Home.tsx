@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Epifanio di Giovanni | Parrucchiere e Hairstylist a Treviglio"
-        description="A Treviglio, Epifanio di Giovanni è il tuo parrucchiere e hairstylist di fiducia: specializzato in colorazioni L’Oréal, tagli personalizzati e trattamenti naturali per capelli luminosi e sani."
+        title="Giulia & Pietro Acconciature Unisex a Caravaggio"
+        description="Giulia & Pietro Acconciature Unisex a Caravaggio (BG): tagli, colore e styling per lui e per lei."
         canonicalUrl="https://epifaniodigiovanni.it"
         ogImage="/assets/model.webp"
-        ogImageAlt="Epifanio di Giovanni hairstylist – salone di parrucchiere a Treviglio"
+        ogImageAlt="Giulia & Pietro Acconciature Unisex a Caravaggio"
         preloadImageHref="/assets/model.webp"
       />
 

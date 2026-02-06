@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 <source srcSet="/assets/logo.webp" type="image/webp" />
                 <img
                   src="/assets/logo.png"
-                  alt="Logo Epifanio Di Giovanni"
+                  alt="Logo Giulia & Pietro Acconciature Unisex"
                   width={120}
                   height={48}
                   loading="eager"

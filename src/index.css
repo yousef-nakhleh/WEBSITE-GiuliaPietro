@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Alex+Brush&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Custom utility to hide scrollbar but keep functionality */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.scroll-melt-mask {
+  --mask-edge: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.scroll-melt-mask--both {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black var(--mask-edge),
+    black calc(100% - var(--mask-edge)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black var(--mask-edge),
+    black calc(100% - var(--mask-edge)),
+    transparent 100%
+  );
+}
+
+.scroll-melt-mask--left {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black var(--mask-edge),
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black var(--mask-edge),
+    black 100%
+  );
+}
+
+.scroll-melt-mask--right {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0,
+    black calc(100% - var(--mask-edge)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    black 0,
+    black calc(100% - var(--mask-edge)),
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .scroll-melt-mask {
+    --mask-edge: 36px;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.font-alex-brush {
+  font-family: 'Alex Brush', cursive;
+}
+/* Diagonal soft-brown wipe for PRENOTA ORA */
+.cta-diagonal::before{
+  content:"";
+  position:absolute;
+  inset:-2px 0 -2px -10%;
+  width:0;
+  transform:rotate(-6deg);
+  background:#6e5a49;          /* soft brown sweep */
+  transition:width .45s ease;
+}
+.cta-diagonal:hover::before{
+  width:150%;
+}

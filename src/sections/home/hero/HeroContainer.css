@@ -1,0 +1,15 @@
+.hero-background {
+  background-image: url('/assets/model.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@supports (background-image: image-set(url('/assets/model.webp') type('image/webp') 1x, url('/assets/model.png') type('image/png') 1x)) {
+  .hero-background {
+    background-image: image-set(
+      url('/assets/model.webp') type('image/webp') 1x,
+      url('/assets/model.png') type('image/png') 1x
+    );
+  }
+}

@@ -1,0 +1,63 @@
+:root {
+  --auth-light-navy: #1e3a5f;
+  --auth-gold: #c9a227;
+  --auth-text: #111827;
+  --auth-muted: #6b7280;
+  --auth-border: #e5e7eb;
+  --auth-bg: #ffffff;
+}
+
+.auth-font-primary {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.auth-text-primary {
+  color: var(--auth-light-navy);
+}
+
+.auth-text-muted {
+  color: var(--auth-muted);
+}
+
+.auth-text-gold {
+  color: var(--auth-gold);
+}
+
+.auth-bg-primary {
+  background-color: var(--auth-light-navy);
+  color: #fff;
+}
+
+.auth-border {
+  border: 1px solid var(--auth-border);
+}
+
+.auth-border-color {
+  border-color: var(--auth-border);
+}
+
+.auth-rounded {
+  border-radius: 0.5rem;
+}
+
+.auth-input {
+  border: 1px solid var(--auth-border);
+  border-radius: 0.5rem;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.auth-btn-primary {
+  background-color: var(--auth-light-navy);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.auth-btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.auth-modal {
+  border: 2px solid var(--auth-border);
+  border-radius: 0.5rem;
+}

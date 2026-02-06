@@ -1,7 +1,6 @@
 import SEO from '../seo/SEO';
 import HeroContainer from '../sections/home/hero/HeroContainer';
 import ServicesContainer from '../sections/home/services/ServicesContainer';
-import TreatmentsContainer from '../sections/home/treatments/TreatmentsContainer';
 import GalleryContainer from '../sections/home/gallery/GalleryContainer';
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
       <HeroContainer />
       <ServicesContainer />
       <GalleryContainer />
-      <TreatmentsContainer />
     </>
   );
 };

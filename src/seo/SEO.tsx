@@ -28,7 +28,7 @@ type SEOProps = {
   extraJsonLd?: Record<string, any> | Record<string, any>[];
 };
 
-const SITE_NAME = 'Epifanio di Giovanni | Hairstylist';
+const SITE_NAME = 'Giulia & Pietro Acconciature Unisex';
 const BASE_URL = 'https://epifaniodigiovanni.it';
 const DEFAULT_LOCALE = 'it_IT';
 const THEME_COLOR = '#DED4CA';
@@ -36,43 +36,44 @@ const COLOR_SCHEME = 'light';
 
 // Default, refined SEO description (local + services + brand)
 const DEFAULT_DESCRIPTION =
-  'A Treviglio, Epifanio di Giovanni è il tuo parrucchiere e hairstylist di fiducia: specializzato in colorazioni L’Oréal, tagli personalizzati e trattamenti naturali per capelli luminosi e sani. La soluzione ideale per donna e uomo.';
+  'A Caravaggio (BG), Giulia & Pietro Acconciature Unisex offre tagli, colore e styling per lui e per lei. Un salone accogliente per ogni esigenza.';
 
 // Default OG image (logo) and alt text
 const DEFAULT_OG_IMAGE = '/assets/logo.png';
 const DEFAULT_OG_IMAGE_ALT =
-  "Epifanio di Giovanni, parrucchiere e hairstylist a Treviglio";
+  'Giulia & Pietro Acconciature Unisex a Caravaggio (BG)';
 
 // Social / profiles (for JSON-LD sameAs)
-const INSTAGRAM_URL = 'https://www.instagram.com/edg.hairstylist/';
+const INSTAGRAM_URL = 'https://www.instagram.com/giuliaepietroacconciature/';
 const GOOGLE_MAPS_URL =
-  'https://www.google.com/maps/place/Epifanio+Di+Giovanni+parrucchiere/@45.5207,9.5887731,17z/data=!3m1!4b1!4m6!3m5!1s0x478149c805c52e05:0xce3f8383e2b27143!8m2!3d45.5207!4d9.591348!16s%2Fg%2F11y3pvvbt5?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D';
+  'https://www.google.com/maps?q=Piazza%20Dottor%20Emilio%20Gallavresi%2C%206%2C%2024043%20Caravaggio%20BG';
 
 // Business details for JSON-LD
 const BUSINESS = {
-  name: 'Epifanio Di Giovanni',
+  name: 'Giulia & Pietro Acconciature Unisex',
   url: BASE_URL,
-  telephone: '+39 338 669 9613',
-  email: 'edg.hair@gmail.com',
+  telephone: '+39 333 934 7932',
   logo: `${BASE_URL}/assets/logo.png`,
   address: {
-    streetAddress: 'Via Giovanni Mulazzani, 11',
-    addressLocality: 'Treviglio',
-    postalCode: '24047',
+    streetAddress: 'Piazza Dottor Emilio Gallavresi, 6',
+    addressLocality: 'Caravaggio',
+    postalCode: '24043',
     addressRegion: 'BG',
     addressCountry: 'IT',
   },
   openingHours: [
-    // Mon
-    // closed
-    // Tue 11–21
-    { day: 'Tuesday', opens: '11:00', closes: '21:00' },
-    // Wed–Fri 09–19
-    { day: 'Wednesday', opens: '09:00', closes: '19:00' },
-    { day: 'Thursday', opens: '09:00', closes: '19:00' },
+    // Mon closed
+    // Tue 09–16
+    { day: 'Tuesday', opens: '09:00', closes: '16:00' },
+    // Wed 09–12, 15–19
+    { day: 'Wednesday', opens: '09:00', closes: '12:00' },
+    { day: 'Wednesday', opens: '15:00', closes: '19:00' },
+    // Thu 09–17
+    { day: 'Thursday', opens: '09:00', closes: '17:00' },
+    // Fri 09–19
     { day: 'Friday', opens: '09:00', closes: '19:00' },
-    // Sat 09–18
-    { day: 'Saturday', opens: '09:00', closes: '18:00' },
+    // Sat 08:30–18
+    { day: 'Saturday', opens: '08:30', closes: '18:00' },
     // Sun closed
   ],
   sameAs: [INSTAGRAM_URL, GOOGLE_MAPS_URL],
@@ -108,7 +109,6 @@ export default function SEO({
     name: BUSINESS.name,
     url: BUSINESS.url,
     telephone: BUSINESS.telephone,
-    email: BUSINESS.email,
     image: finalOgImage,
     logo: BUSINESS.logo,
     address: {
@@ -125,21 +125,21 @@ export default function SEO({
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Tuesday',
-        opens: '11:00',
-        closes: '21:00',
+        opens: '09:00',
+        closes: '16:00',
       },
-      // Wednesday–Friday
+      // Wednesday (split)
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Wednesday',
         opens: '09:00',
-        closes: '19:00',
+        closes: '12:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Thursday',
         opens: '09:00',
-        closes: '19:00',
+        closes: '17:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
@@ -147,11 +147,17 @@ export default function SEO({
         opens: '09:00',
         closes: '19:00',
       },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Wednesday',
+        opens: '15:00',
+        closes: '19:00',
+      },
       // Saturday
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Saturday',
-        opens: '09:00',
+        opens: '08:30',
         closes: '18:00',
       },
     ],

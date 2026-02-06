@@ -48,7 +48,7 @@ const DiscountBanner = () => {
           <p className="m-0 text-center text-base leading-snug font-semibold">
             <span className="text-[#CC1802] uppercase">SCONTO</span> di benvenuto<br />
             <a
-              href="tel:3386699613"
+              href="tel:3339347932"
               className="text-[#CC1802] underline underline-offset-2 decoration-2"
             >
               chiamando ora!

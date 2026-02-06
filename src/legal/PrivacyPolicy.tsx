@@ -6,8 +6,8 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F5F1EB] text-[#3C2A21] pt-20">
       <SEO
-        title="Privacy Policy | Epifanio di Giovanni"
-        description="Informativa sulla privacy del sito Epifanio di Giovanni: scopri come vengono trattati i tuoi dati personali e come esercitare i tuoi diritti."
+        title="Privacy Policy | Giulia & Pietro Acconciature Unisex"
+        description="Informativa sulla privacy del sito Giulia & Pietro Acconciature Unisex: scopri come vengono trattati i tuoi dati personali e come esercitare i tuoi diritti."
         canonicalUrl="https://epifaniodigiovanni.it/privacy"
         robots="index, follow"
       />
@@ -73,7 +73,7 @@ const PrivacyPolicy: React.FC = () => {
             <h2 className="text-lg font-medium">6. I tuoi diritti</h2>
             <p className="mt-2">
               Puoi chiedere accesso, rettifica, cancellazione o limitazione del trattamento. Per
-              esercitare i diritti scrivici all’indirizzo email qui sotto.
+              esercitare i diritti contattaci ai riferimenti qui sotto.
             </p>
           </div>
 
@@ -88,9 +88,16 @@ const PrivacyPolicy: React.FC = () => {
           <div>
             <h2 className="text-lg font-medium">8. Contatti</h2>
             <p className="mt-2">
-              Per domande sulla privacy o richieste relative ai dati, contattaci via email:{" "}
-              <a href="mailto:edg.hair@gmail.com" className="underline underline-offset-2">
-                edg.hair@gmail.com
+              Per domande sulla privacy o richieste relative ai dati, contattaci al{" "}
+              <a href="tel:3339347932" className="underline underline-offset-2">
+                333 934 7932
+              </a>{" "}
+              o su{" "}
+              <a
+                href="https://www.instagram.com/giuliaepietroacconciature/"
+                className="underline underline-offset-2"
+              >
+                Instagram
               </a>
               .
             </p>
@@ -99,8 +106,8 @@ const PrivacyPolicy: React.FC = () => {
 
         <footer className="mt-12 pt-6 border-t border-[#3C2A21]/20 text-sm opacity-80">
           <p>
-            Titolare del trattamento: Epifanio Di Giovanni — Indirizzo: Via Giovanni Mulazzani, 16,
-            24047 Treviglio (BG).
+            Titolare del trattamento: Giulia &amp; Pietro Acconciature Unisex — Indirizzo: Piazza
+            Dottor Emilio Gallavresi, 6, 24043 Caravaggio (BG).
           </p>
         </footer>
       </div>

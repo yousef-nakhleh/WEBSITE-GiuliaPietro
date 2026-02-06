@@ -4,7 +4,7 @@ const ServicesContainer = () => {
   return (
     <section
       id="servizi"
-      className="relative h-[50vh] flex items-center justify-center text-center text-white overflow-hidden"
+      className="relative h-[33vh] md:h-[50vh] flex items-center justify-center text-center text-white overflow-hidden"
     >
       {/* MOBILE background (no parallax): show only < md */}
       <picture className="md:hidden">

@@ -132,11 +132,13 @@ const GalleryCard = ({ onSelectLook }: Props) => {
     const desc = lookDescriptions[index] ?? lookDescriptions[0];
     onSelectLook?.(desc);
 
-    // smooth scroll to form on mobile
     if (window.innerWidth < 1024) {
       setTimeout(() => {
         const form = document.querySelector('form');
-        if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (form) {
+          const y = form.getBoundingClientRect().top + window.scrollY - 64;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
       }, 100);
     }
   };

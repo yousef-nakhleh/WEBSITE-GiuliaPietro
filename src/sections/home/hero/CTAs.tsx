@@ -31,16 +31,27 @@ const CTAs = () => {
   return (
     <>
       <div className="flex justify-center gap-4">
-        <button
-          onClick={() => navigate('/prenotazione/servizi')}
-          className="bg-[#e8dfd5] border border-[#e8dfd5] text-black px-8 py-3 rounded-full font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px] hover:bg-black hover:text-white transition-all duration-300"
-        >
-          PRENOTA ORA
-        </button>
+        <div className="relative inline-flex items-center justify-center min-w-[150px]">
+          <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            <div
+              className="absolute inset-[-100%] animate-border-spin"
+              style={{
+                background:
+                  'conic-gradient(from 0deg, transparent 0%, transparent 60%, #e8dfd5 75%, #3C2A21 85%, #e8dfd5 95%, transparent 100%)',
+              }}
+            />
+          </div>
+          <button
+            onClick={() => navigate('/prenotazione/servizi')}
+            className="relative bg-white text-[#3C2A21] m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full"
+          >
+            PRENOTA ORA
+          </button>
+        </div>
 
         <button
           onClick={() => setIsFormOpen(true)}
-          className="bg-transparent border border-black text-black px-8 py-3 rounded-full font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px] hover:bg-black hover:text-white transition-all duration-300"
+          className="bg-transparent border border-[#e8dfd5] text-[#e8dfd5] px-8 py-3 rounded-full font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px] hover:bg-[#e8dfd5] hover:text-[#3C2A21] transition-all duration-300"
         >
           CONSULENZA GRATUITA
         </button>

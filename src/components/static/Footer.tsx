@@ -118,7 +118,7 @@ const Footer = () => {
 
           {/* Legal Row ABOVE the line */}
           <div className="flex flex-col md:flex-row items-center justify-between text-xs text-[#3C2A21]/70 mb-4">
-            <p className="tracking-widest text-[#3C2A21]/70">© 2025 Giulia &amp; Pietro Acconciature Unisex</p>
+            <p className="tracking-widest text-[#3C2A21]/70">© 2026 Giulia &amp; Pietro Acconciature Unisex</p>
             <div className="flex space-x-6 mt-2 md:mt-0">
               <button
                 type="button"

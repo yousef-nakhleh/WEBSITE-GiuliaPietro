@@ -4,7 +4,6 @@ import { AuthProvider, useAuth } from './authentication/context/AuthContext';
 import { supabase } from './lib/supabaseClient';
 import { BUSINESS_ID } from './config/business'; // ✅ ADD THIS
 import { Helmet } from 'react-helmet-async';
-import useMinuteAlignedTick from './booking/slots/hooks/useMinuteAlignedTick';
 import { bookingStorage } from './utils/bookingStorage';
 
 import Navbar from './components/static/Navbar';
@@ -175,7 +174,6 @@ const successConfig = {
 };
 
 function InnerApp() {
-  const minuteTick = useMinuteAlignedTick();
   const hasSelectedService = () => {
     const storedServiceIds = bookingStorage.getItem('selectedServiceIds');
     const storedServiceId = bookingStorage.getItem('selectedServiceId');
@@ -248,7 +246,6 @@ function InnerApp() {
                     createAppointmentRpcName={bookingFlowConfig.createAppointmentRpcName}
                     defaultTimezone={bookingFlowConfig.defaultTimezone}
                     defaultPhonePrefix={bookingFlowConfig.defaultPhonePrefix}
-                    minuteTick={minuteTick}
                     SEOComponent={SEO}
                     LoginModalComponent={LoginModal}
                     ContactPanelComponent={ContactPanel}

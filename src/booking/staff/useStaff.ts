@@ -61,21 +61,13 @@ export const useStaff = ({
 
   // Handle staff selection
   const selectStaff = (staff: Staff) => {
+    // Save to sessionStorage
     bookingStorage.setItem('selectedBarber', JSON.stringify(staff));
 
-    requestAnimationFrame(() => {
-      const verified = bookingStorage.getItem('selectedBarber');
-      if (verified && onStaffSelect) {
-        onStaffSelect(staff);
-      } else if (!verified) {
-        console.error('Storage verification failed for barber selection');
-        setTimeout(() => {
-          if (onStaffSelect) {
-            onStaffSelect(staff);
-          }
-        }, 100);
-      }
-    });
+    // Call parent callback if provided
+    if (onStaffSelect) {
+      onStaffSelect(staff);
+    }
   };
 
   return {

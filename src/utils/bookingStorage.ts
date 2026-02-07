@@ -15,25 +15,17 @@ const getSessionStorage = (): Storage | null => {
 
 export const bookingStorage = {
   getItem(key: string): string | null {
-    const memoryValue = memoryStorage.get(key);
-    if (memoryValue !== undefined) {
-      return memoryValue;
-    }
-
     const storage = getSessionStorage();
+
     if (!storage) {
-      return null;
+      return memoryStorage.get(key) ?? null;
     }
 
     try {
-      const sessionValue = storage.getItem(key);
-      if (sessionValue !== null) {
-        memoryStorage.set(key, sessionValue);
-      }
-      return sessionValue;
+      return storage.getItem(key);
     } catch (error) {
       console.warn('Failed reading from session storage, using fallback.', error);
-      return null;
+      return memoryStorage.get(key) ?? null;
     }
   },
 

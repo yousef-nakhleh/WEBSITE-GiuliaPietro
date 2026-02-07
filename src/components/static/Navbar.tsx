@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 border-b border-[#d4c9bc]/30 ${
-        scrolled ? 'bg-[#E8E0D5] py-2' : 'bg-[#E8E0D5] py-6'
+      className={`fixed top-3 left-3 right-3 md:top-4 md:left-6 md:right-6 z-30 transition-all duration-500 rounded-3xl bg-white shadow-md ${
+        scrolled ? 'py-2' : 'py-6'
       }`}
       aria-label="Barra di navigazione principale"
       role="banner"
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
               : 'opacity-0 -translate-y-4 pointer-events-none'
           }`}
         >
-          <nav className="bg-[#E8E0D5] mt-2 p-6 rounded-lg space-y-6 shadow-xl">
+          <nav className="bg-white mt-2 p-6 rounded-2xl space-y-6 shadow-xl">
             <MobileNavLink href="/#home" onClick={() => setIsOpen(false)}>
               Home
             </MobileNavLink>

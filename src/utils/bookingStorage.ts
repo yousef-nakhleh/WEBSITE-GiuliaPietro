@@ -22,8 +22,7 @@ export const bookingStorage = {
     }
 
     try {
-      const storedValue = storage.getItem(key);
-      return storedValue ?? memoryStorage.get(key) ?? null;
+      return storage.getItem(key);
     } catch (error) {
       console.warn('Failed reading from session storage, using fallback.', error);
       return memoryStorage.get(key) ?? null;

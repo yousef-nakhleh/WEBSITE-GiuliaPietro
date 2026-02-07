@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { useSlots } from './hooks/useSlots';
-import useMinuteAlignedTick from './hooks/useMinuteAlignedTick';
 import { useBooking } from './hooks/useBooking';
 import { useContact } from './hooks/useContact';
 import { useConsent } from './hooks/useConsent';
@@ -62,6 +61,7 @@ interface SelectTimeSlotProps {
   createAppointmentRpcName: string;
   defaultTimezone: string;
   defaultPhonePrefix: string;
+  minuteTick: number;
   SEOComponent: React.ComponentType<SEOProps>;
   LoginModalComponent: React.ComponentType<{ isOpen: boolean; onClose: () => void }>;
   ContactPanelComponent: React.ComponentType<any>;
@@ -83,6 +83,7 @@ const SelectTimeSlot = ({
   createAppointmentRpcName,
   defaultTimezone,
   defaultPhonePrefix,
+  minuteTick,
   SEOComponent,
   LoginModalComponent,
   ContactPanelComponent,
@@ -94,7 +95,6 @@ const SelectTimeSlot = ({
 }: SelectTimeSlotProps) => {
   const navigate = useNavigate();
   const { user, profile } = useAuthHook();
-  const minuteTick = useMinuteAlignedTick();
 
   // Retrieve data from previous steps
   const [selectedBarber, setSelectedBarber] = useState<Barber | null>(() =>

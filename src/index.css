@@ -114,3 +114,15 @@ body {
 .cta-diagonal:hover::before{
   width:150%;
 }
+
+@keyframes border-spin {
+  0%   { transform: rotate(0deg); opacity: 0; }
+  5%   { opacity: 1; }
+  35%  { transform: rotate(360deg); opacity: 1; }
+  45%  { transform: rotate(360deg); opacity: 0; }
+  100% { transform: rotate(360deg); opacity: 0; }
+}
+
+.animate-border-spin {
+  animation: border-spin 5s ease-in-out infinite;
+}

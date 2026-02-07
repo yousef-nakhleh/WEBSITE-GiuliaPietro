@@ -72,7 +72,16 @@ const SelectService = ({
     bookingStorage.setItem('selectedServiceIds', JSON.stringify(selectedServiceIds));
     bookingStorage.setItem('selectedServices', JSON.stringify(selectedServices));
     bookingStorage.setItem('selectedServiceId', selectedServiceIds[0]);
-    navigate(staffSelectionRoute);
+
+    requestAnimationFrame(() => {
+      const verified = bookingStorage.getItem('selectedServiceIds');
+      if (verified) {
+        navigate(staffSelectionRoute);
+      } else {
+        console.error('Storage verification failed');
+        setTimeout(() => navigate(staffSelectionRoute), 100);
+      }
+    });
   };
 
   // Loading state

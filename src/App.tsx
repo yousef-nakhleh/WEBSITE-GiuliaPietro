@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './authentication/context/AuthContext';
 import { supabase } from './lib/supabaseClient';
@@ -175,17 +175,16 @@ const successConfig = {
 };
 
 function InnerApp() {
-  const minuteTick = useMinuteAlignedTick();
-  const hasSelectedService = () => {
+  const hasSelectedService = useMemo(() => {
     const storedServiceIds = bookingStorage.getItem('selectedServiceIds');
     const storedServiceId = bookingStorage.getItem('selectedServiceId');
     return !!(storedServiceIds || storedServiceId);
-  };
+  }, []);
 
-  const hasSelectedBarber = () => {
+  const hasSelectedBarber = useMemo(() => {
     const storedBarber = bookingStorage.getItem('selectedBarber');
     return !!storedBarber;
-  };
+  }, []);
 
   return (
     <Router>
@@ -218,7 +217,7 @@ function InnerApp() {
             <Route
               path="/prenotazione/staff"
               element={
-                hasSelectedService() ? (
+                hasSelectedService ? (
                   <SelectStaff
                     supabaseClient={bookingFlowConfig.supabaseClient}
                     businessId={bookingFlowConfig.businessId}
@@ -236,7 +235,7 @@ function InnerApp() {
             <Route
               path="/prenotazione/orari"
               element={
-                hasSelectedService() && hasSelectedBarber() ? (
+                hasSelectedService && hasSelectedBarber ? (
                   <SelectTimeSlot
                     supabaseClient={bookingFlowConfig.supabaseClient}
                     businessId={bookingFlowConfig.businessId}
@@ -248,7 +247,6 @@ function InnerApp() {
                     createAppointmentRpcName={bookingFlowConfig.createAppointmentRpcName}
                     defaultTimezone={bookingFlowConfig.defaultTimezone}
                     defaultPhonePrefix={bookingFlowConfig.defaultPhonePrefix}
-                    minuteTick={minuteTick}
                     SEOComponent={SEO}
                     LoginModalComponent={LoginModal}
                     ContactPanelComponent={ContactPanel}
@@ -261,7 +259,7 @@ function InnerApp() {
                 ) : (
                   <Navigate
                     to={
-                      hasSelectedService()
+                      hasSelectedService
                         ? bookingFlowConfig.routes.staff
                         : bookingFlowConfig.routes.service
                     }

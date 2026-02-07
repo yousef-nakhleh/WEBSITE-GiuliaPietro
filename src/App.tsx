@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './authentication/context/AuthContext';
 import { supabase } from './lib/supabaseClient';
@@ -175,16 +175,16 @@ const successConfig = {
 };
 
 function InnerApp() {
-  const hasSelectedService = useMemo(() => {
+  const hasSelectedService = (() => {
     const storedServiceIds = bookingStorage.getItem('selectedServiceIds');
     const storedServiceId = bookingStorage.getItem('selectedServiceId');
     return !!(storedServiceIds || storedServiceId);
-  }, []);
+  })();
 
-  const hasSelectedBarber = useMemo(() => {
+  const hasSelectedBarber = (() => {
     const storedBarber = bookingStorage.getItem('selectedBarber');
     return !!storedBarber;
-  }, []);
+  })();
 
   return (
     <Router>

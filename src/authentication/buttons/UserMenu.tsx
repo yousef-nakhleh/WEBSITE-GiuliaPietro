@@ -69,7 +69,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ isOpen, onClose, user, signOut, nav
         <div className="p-2">
           <button
             onClick={() => {
-              navigate('/user/appuntamenti');
+              navigate('/areapersonale/appuntamenti');
               onClose();
             }}
             className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-gray-50 rounded-lg transition-colors"

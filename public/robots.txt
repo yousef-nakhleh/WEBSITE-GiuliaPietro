@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://epifaniodigiovanni.it/sitemap.xml
+Sitemap: https://www.giuliaepietroacconciature.it/sitemap.xml

@@ -81,7 +81,7 @@ const bookingFlowConfig = {
 };
 
 const appointmentsConfig = {
-  route: '/user/appuntamenti',
+  route: '/areapersonale/appuntamenti',
   slotsEdgeFunctionName: bookingFlowConfig.edgeFunctionName,
 };
 

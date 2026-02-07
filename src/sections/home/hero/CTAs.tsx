@@ -33,7 +33,7 @@ const CTAs = () => {
       <div className="flex justify-center gap-4">
         <button
           onClick={() => navigate('/prenotazione/servizi')}
-          className="bg-white text-[#6e5a49] px-8 py-3 rounded-full font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px]"
+          className="bg-white text-[#6e5a49] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px]"
         >
           PRENOTA ORA
         </button>

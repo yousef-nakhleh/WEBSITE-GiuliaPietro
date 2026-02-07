@@ -126,3 +126,8 @@ body {
 .animate-border-spin {
   animation: border-spin 5s ease-in-out infinite;
 }
+
+.animate-border-spin-delayed {
+  animation: border-spin 5s ease-in-out infinite;
+  animation-delay: 2s;
+}

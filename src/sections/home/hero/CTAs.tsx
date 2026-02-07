@@ -49,12 +49,23 @@ const CTAs = () => {
           </button>
         </div>
 
-        <button
-          onClick={() => setIsFormOpen(true)}
-          className="bg-transparent border border-[#e8dfd5] text-[#e8dfd5] px-8 py-3 rounded-full font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center min-w-[150px] hover:bg-[#e8dfd5] hover:text-[#3C2A21] transition-all duration-300"
-        >
-          CONSULENZA GRATUITA
-        </button>
+        <div className="relative inline-flex items-center justify-center min-w-[150px]">
+          <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            <div
+              className="absolute inset-[-100%] animate-border-spin-delayed"
+              style={{
+                background:
+                  'conic-gradient(from 0deg, transparent 0%, transparent 60%, #e8dfd5 75%, #3C2A21 85%, #e8dfd5 95%, transparent 100%)',
+              }}
+            />
+          </div>
+          <button
+            onClick={() => setIsFormOpen(true)}
+            className="relative bg-transparent text-white border border-white m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full hover:bg-white hover:text-[#3C2A21] transition-all duration-300"
+          >
+            CONSULENZA GRATUITA
+          </button>
+        </div>
       </div>
 
       {isFormOpen && (

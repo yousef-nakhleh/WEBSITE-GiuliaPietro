@@ -61,7 +61,7 @@ const CTAs = () => {
           </div>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="relative bg-[#3C2A21] text-white m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full hover:bg-[#e8dfd5] hover:text-[#3C2A21] transition-all duration-300"
+            className="relative bg-transparent text-white m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full hover:bg-white/10 transition-all duration-300"
           >
             CONSULENZA GRATUITA
           </button>

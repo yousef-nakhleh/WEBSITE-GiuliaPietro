@@ -6,26 +6,30 @@ type Props = {
 };
 
 const modelImages = [
-  '/assets/model1',
-  '/assets/model2',
-  '/assets/model3',
-  '/assets/model4',
-  '/assets/model5',
-  '/assets/model6',
-  '/assets/model7',
-  '/assets/model8',
+  '/assets/images/giulia-e-pietro-balayage-naturale-beige-caravaggio',
+  '/assets/images/giulia-e-pietro-balayage-freddo-sabbia-caravaggio',
+  '/assets/images/giulia-e-pietro-rame-intenso-luminoso-caravaggio',
+  '/assets/images/giulia-e-pietro-castano-caldo-naturale-caravaggio',
+  '/assets/images/giulia-e-pietro-balayage-freddo-perlato-caravaggio',
+  '/assets/images/giulia-e-pietro-riccio-rame-vibrante-caravaggio',
+  '/assets/images/giulia-e-pietro-biondo-freddo-naturale-caravaggio',
+  '/assets/images/giulia-e-pietro-nero-profondo-lucido-caravaggio',
+  '/assets/images/giulia-e-pietro-biondo-naturale-luminoso-caravaggio',
+  '/assets/images/giulia-e-pietro-rame-caldo-multidimensionale-caravaggio',
 ];
 
 // 🔹 Exact descriptions to pass to the form (no “Look X — …” labels)
 const lookDescriptions = [
-  'Schiariture Summer blonde Gold su base bionda naturale.',
-  'Soft color moca base castana naturale.',
-  'Gloss e wave soft.',
-  'Marylin blonde e cut inspiration',
-  'Black gloss e wave.',
-  'Gold blonde Natural su base copper naturale.',
-  'sfumature extra hawaiana blonde su base castana.',
-  'Schiariture honey su base castana.',
+  'Balayage freddo sabbia, con sfumature soft e luminosità naturale su lunghezze ondulate.',
+  'Balayage naturale beige, con sfumature delicate e onde morbide armoniose.',
+  'Rame intenso e luminoso, con riflessi caldi e onde morbide naturali.',
+  'Nero profondo e lucido, con onde morbide che esaltano eleganza e intensità del colore.',
+  'Balayage freddo con sfumature perlate e finish luminoso naturale.',
+  'Riccio rame vibrante, con definizione naturale e riflessi caldi luminosi.',
+  'Biondo freddo naturale, con schiariture pulite e finish setoso sulle lunghezze.',
+  'Castano caldo naturale, con riflessi morbidi e movimento elegante sulle lunghezze.',
+  'Biondo naturale luminoso, con schiariture morbide e movimento leggero.',
+  'Rame caldo multidimensionale, con riflessi avvolgenti e texture morbida naturale.',
 ];
 
 const AUTO_MS = 2500;

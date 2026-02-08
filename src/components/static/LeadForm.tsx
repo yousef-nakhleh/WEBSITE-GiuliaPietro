@@ -135,7 +135,7 @@ const LeadForm = () => {
       <button
         type="submit"
         disabled={status === 'loading' || !form.privacy || !form.name.trim() || !isValid(form.name, form.phone_number_raw)}
-        className="w-full bg-[#3C2A21] text-white py-3 font-semibold tracking-wide rounded-none hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full bg-[#e8dfd5] text-black border-2 border-black py-3 font-semibold tracking-wide rounded-none transition disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === 'loading' ? 'Invio…' : 'INVIA RICHIESTA'}
       </button>

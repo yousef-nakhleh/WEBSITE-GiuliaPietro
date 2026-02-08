@@ -174,7 +174,7 @@ const GalleryForm = ({ selectedLook }: GalleryFormProps) => {
           !formData.privacy ||
           !isValid(formData.name, formData.phone_number_raw)
         }
-        className="w-full bg-[#3C2A21] text-[#E8E0D6] py-3 font-semibold tracking-wide rounded-none transition disabled:opacity-60"
+        className="w-full bg-[#e8dfd5] text-black border-2 border-black py-3 font-semibold tracking-wide rounded-none transition disabled:opacity-60"
       >
         {status === 'loading' ? 'Invio…' : 'Invia Richiesta'}
       </button>

@@ -82,7 +82,7 @@ const GalleryForm = ({ selectedLook }: GalleryFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-transparent p-0">
-      <h3 className="text-3xl font-bold mb-6 text-black">Trasforma il tuo desiderio in realtà</h3>
+      <h3 className="text-2xl md:text-3xl font-bold mb-6 text-black">Il look che desideri inizia da qui</h3>
 
       {/* Nome */}
       <div className="mb-4">

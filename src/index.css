@@ -131,3 +131,41 @@ body {
   animation: border-spin 5s ease-in-out infinite;
   animation-delay: 2s;
 }
+
+/* Diagonal shine animation for CONSULENZA GRATUITA button */
+.shine-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 80%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.6) 55%,
+    rgba(255, 255, 255, 0.4) 60%,
+    transparent 70%,
+    transparent 100%
+  );
+  transform: rotate(45deg);
+  animation: diagonal-shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes diagonal-shine {
+  0% {
+    left: -150%;
+    top: -50%;
+  }
+  50% {
+    left: 150%;
+    top: 150%;
+  }
+  100% {
+    left: 150%;
+    top: 150%;
+  }
+}

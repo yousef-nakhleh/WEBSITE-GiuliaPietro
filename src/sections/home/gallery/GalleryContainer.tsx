@@ -13,12 +13,13 @@ const GalleryContainer = () => {
     <section id="galleria" className="py-12 bg-white">
       <div className="container mx-auto px-6">
         {/* Title */}
-        <div className="max-w-7xl mx-auto text-center mb-12">
+        <div className="max-w-7xl mx-auto text-center mb-8 md:mb-12">
           <h2
-            className="text-4xl md:text-5xl font-bold text-black"
+            className="text-3xl md:text-5xl font-bold text-black"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
-            Scegli il look adatto a te
+            <span className="md:hidden">Scegli il tuo prossimo look</span>
+            <span className="hidden md:inline">Scegli il look adatto a te</span>
           </h2>
         </div>
 

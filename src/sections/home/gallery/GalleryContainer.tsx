@@ -15,7 +15,7 @@ const GalleryContainer = () => {
         {/* Title */}
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#3C2A21]"
+            className="text-4xl md:text-5xl font-bold text-black"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             Scegli il look adatto a te

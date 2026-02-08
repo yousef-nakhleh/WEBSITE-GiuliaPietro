@@ -4,7 +4,7 @@ import SEO from "../seo/SEO";
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#F5F1EB] text-[#3C2A21] pt-20">
+    <div className="min-h-screen bg-[#F5F1EB] text-black pt-20">
       <SEO
         title="Privacy Policy | Giulia & Pietro Acconciature Unisex"
         description="Informativa sulla privacy del sito Giulia & Pietro Acconciature Unisex: scopri come vengono trattati i tuoi dati personali e come esercitare i tuoi diritti."

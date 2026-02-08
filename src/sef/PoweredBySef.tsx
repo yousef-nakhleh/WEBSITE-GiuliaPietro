@@ -14,8 +14,8 @@ const PoweredBySef: React.FC<Props> = ({
 }) => {
   // palette
   const sep = 'bg-[#e9e0d7]';              // subtle divider line
-  const base = muted ? 'text-[#8c7a6a]' : 'text-[#6e5a49]';
-  const hover = 'hover:text-[#a88a69]';    // goldish hover tone
+  const base = muted ? 'text-black/70' : 'text-black';
+  const hover = 'hover:text-black';    // goldish hover tone
 
   return (
     <div className={`w-full ${className}`}>

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer
         id="contatti"
-        className="bg-[#e8dfd5] text-[#3C2A21] pt-16 pb-8"
+        className="bg-[#e8dfd5] text-black pt-16 pb-8"
         itemScope
         itemType="https://schema.org/LocalBusiness"
       >
@@ -41,7 +41,7 @@ const Footer = () => {
               <div className="flex space-x-4 mt-2">
                 <a
                   href="tel:3339347932"
-                  className="hover:text-[#a18973] transition-colors"
+                  className="hover:text-black transition-colors"
                   aria-label="Telefono"
                   itemProp="telephone"
                 >
@@ -51,7 +51,7 @@ const Footer = () => {
                   href="https://www.instagram.com/giuliaepietroacconciature/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#a18973] transition-colors"
+                  className="hover:text-black transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="text-sm text-center md:text-left space-y-4">
               <div className="flex items-center justify-center md:justify-start">
                 <Phone size={18} className="mr-2" />
-                <a href="tel:3339347932" className="hover:text-[#a18973]" itemProp="telephone">
+                <a href="tel:3339347932" className="hover:text-black" itemProp="telephone">
                   333 934 7932
                 </a>
               </div>
@@ -117,19 +117,19 @@ const Footer = () => {
           </div>
 
           {/* Legal Row ABOVE the line */}
-          <div className="flex flex-col md:flex-row items-center justify-between text-xs text-[#3C2A21]/70 mb-4">
-            <p className="tracking-widest text-[#3C2A21]/70">© 2026 Giulia &amp; Pietro Acconciature Unisex</p>
+          <div className="flex flex-col md:flex-row items-center justify-between text-xs text-black/70 mb-4">
+            <p className="tracking-widest text-black/70">© 2026 Giulia &amp; Pietro Acconciature Unisex</p>
             <div className="flex space-x-6 mt-2 md:mt-0">
               <button
                 type="button"
                 onClick={() => setOpenPrefs(true)}
-                className="hover:text-[#a18973] transition-colors underline-offset-2 hover:underline"
+                className="hover:text-black transition-colors underline-offset-2 hover:underline"
               >
                 Impostazioni Cookie
               </button>
               <a
                 href="/privacy"
-                className="hover:text-[#a18973] transition-colors underline-offset-2 hover:underline"
+                className="hover:text-black transition-colors underline-offset-2 hover:underline"
               >
                 Privacy Policy
               </a>

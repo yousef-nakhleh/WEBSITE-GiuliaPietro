@@ -82,11 +82,11 @@ const GalleryForm = ({ selectedLook }: GalleryFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-transparent p-0">
-      <h3 className="text-3xl font-bold mb-6 text-[#3C2A21]">Trasforma il tuo desiderio in realtà</h3>
+      <h3 className="text-3xl font-bold mb-6 text-black">Trasforma il tuo desiderio in realtà</h3>
 
       {/* Nome */}
       <div className="mb-4">
-        <label className="block text-[#3C2A21] font-medium mb-2">Nome</label>
+        <label className="block text-black font-medium mb-2">Nome</label>
         <input
           type="text"
           name="name"
@@ -104,14 +104,14 @@ const GalleryForm = ({ selectedLook }: GalleryFormProps) => {
 
       {/* Numero */}
       <div className="mb-2">
-        <label className="block text-[#3C2A21] font-medium mb-2">Numero</label>
+        <label className="block text-black font-medium mb-2">Numero</label>
         <div className="flex gap-2">
           <input
             type="text"
             name="phone_prefix"
             value={formData.phone_prefix}
             onChange={handleChange}
-            className="w-24 border border-[#d9d3cb] px-3 py-3 rounded-none bg-[#f6f3ef] text-[#3C2A21] focus:outline-none"
+            className="w-24 border border-[#d9d3cb] px-3 py-3 rounded-none bg-[#f6f3ef] text-black focus:outline-none"
             readOnly
           />
           <input
@@ -131,18 +131,18 @@ const GalleryForm = ({ selectedLook }: GalleryFormProps) => {
 
       {/* Look desiderato */}
       <div className="mb-4">
-        <label className="block text-[#3C2A21] font-medium mb-2">Look desiderato</label>
+        <label className="block text-black font-medium mb-2">Look desiderato</label>
         <input
           type="text"
           name="request"
           value={formData.request}
           readOnly
-          className="w-full border border-[#d9d3cb] px-3 py-3 rounded-none bg-[#f6f3ef] text-[#3C2A21] focus:outline-none"
+          className="w-full border border-[#d9d3cb] px-3 py-3 rounded-none bg-[#f6f3ef] text-black focus:outline-none"
         />
       </div>
 
       {/* Privacy */}
-      <label className="flex items-start gap-2 text-sm text-[#3C2A21] mb-4 select-none">
+      <label className="flex items-start gap-2 text-sm text-black mb-4 select-none">
         <input
           type="checkbox"
           name="privacy"

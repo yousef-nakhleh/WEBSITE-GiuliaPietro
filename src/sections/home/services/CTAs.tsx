@@ -8,7 +8,7 @@ const CTAs = () => {
       {/* CTA Button (same visual language) */}
       <button
         onClick={() => navigate('/prenotazione/servizi')}
-        className="px-8 py-3 border-2 border-white bg-white text-[#6e5a49] rounded-full text-sm font-semibold tracking-wider hover:bg-transparent hover:text-white transition-all duration-300"
+        className="px-8 py-3 border-2 border-white bg-white text-black rounded-full text-sm font-semibold tracking-wider hover:bg-transparent hover:text-white transition-all duration-300"
       >
         SCOPRI I SERVIZI
       </button>

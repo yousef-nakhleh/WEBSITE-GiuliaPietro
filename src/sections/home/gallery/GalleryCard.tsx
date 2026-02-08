@@ -216,8 +216,8 @@ const GalleryCard = ({ onSelectLook }: Props) => {
         <button
           type="button"
           onClick={handleSelect}
-          className="absolute bottom-0 left-0 w-full text-white text-center py-4 tracking-wide"
-          style={{ backgroundColor: '#CC1802', borderRadius: 0 }}
+          className="absolute bottom-0 left-0 w-full text-black text-center py-4 tracking-wide"
+          style={{ backgroundColor: '#e8dfd5', borderRadius: 0 }}
         >
           VOGLIO QUESTO LOOK
         </button>

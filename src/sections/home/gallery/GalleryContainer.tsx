@@ -10,12 +10,12 @@ const GalleryContainer = () => {
   const [selectedLook, setSelectedLook] = useState<string | null>(null);
 
   return (
-    <section id="galleria" className="py-12 bg-white">
+    <section id="galleria" className="pt-6 pb-12 md:py-12 bg-white">
       <div className="container mx-auto px-6">
         {/* Title */}
-        <div className="max-w-7xl mx-auto text-center mb-8 md:mb-12">
+        <div className="max-w-7xl mx-auto text-center mb-6 md:mb-12">
           <h2
-            className="text-3xl md:text-5xl font-bold text-black"
+            className="text-2xl md:text-5xl font-bold text-black"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             <span className="md:hidden">Scegli il tuo prossimo look</span>

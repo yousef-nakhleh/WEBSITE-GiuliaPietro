@@ -62,7 +62,7 @@ const LeadForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="space-y-3 text-[#3C2A21]">
+    <form onSubmit={onSubmit} className="space-y-3 text-black">
       {/* NAME */}
       <div>
         <input
@@ -73,7 +73,7 @@ const LeadForm = () => {
           onBlur={(e) => handleBlur('name', e.target.value)}
           required
           autoComplete="name"
-          className="w-full border border-[#3C2A21] bg-white text-[#3C2A21] px-4 py-3 outline-none rounded-none focus:ring-0 focus:border-[#3C2A21]"
+          className="w-full border border-[#3C2A21] bg-white text-black px-4 py-3 outline-none rounded-none focus:ring-0 focus:border-[#3C2A21]"
         />
         {touched.name && errors.name && (
           <p className="text-red-600 text-xs mt-1">{errors.name}</p>
@@ -87,7 +87,7 @@ const LeadForm = () => {
             name="phone_prefix"
             value={form.phone_prefix}
             readOnly
-            className="w-24 border border-[#3C2A21] bg-white text-[#3C2A21] px-4 py-3 outline-none rounded-none focus:ring-0"
+            className="w-24 border border-[#3C2A21] bg-white text-black px-4 py-3 outline-none rounded-none focus:ring-0"
           />
           <input
             name="phone_number_raw"
@@ -98,7 +98,7 @@ const LeadForm = () => {
             value={form.phone_number_raw}
             onChange={onChange}
             onBlur={(e) => handleBlur('phone_number_raw', e.target.value)}
-            className="flex-1 border border-[#3C2A21] bg-white text-[#3C2A21] px-4 py-3 outline-none rounded-none focus:ring-0 focus:border-[#3C2A21]"
+            className="flex-1 border border-[#3C2A21] bg-white text-black px-4 py-3 outline-none rounded-none focus:ring-0 focus:border-[#3C2A21]"
           />
         </div>
         {touched.phone_number_raw && errors.phone_number_raw && (
@@ -113,7 +113,7 @@ const LeadForm = () => {
         value={form.request}
         onChange={onChange}
         rows={4}
-        className="w-full border border-[#3C2A21] bg-white text-[#3C2A21] px-4 py-3 outline-none rounded-none resize-none focus:ring-0 focus:border-[#3C2A21]"
+        className="w-full border border-[#3C2A21] bg-white text-black px-4 py-3 outline-none rounded-none resize-none focus:ring-0 focus:border-[#3C2A21]"
       />
 
       {/* PRIVACY */}

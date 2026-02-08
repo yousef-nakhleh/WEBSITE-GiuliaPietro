@@ -3,7 +3,7 @@ const Salon = () => {
     <section id="salone" className="min-h-screen bg-[#F5F0E6] flex items-center py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-[#3C2A21] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="text-5xl md:text-6xl font-bold text-black mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             Il Nostro Salone
           </h2>
           <div className="flex justify-center">
@@ -47,7 +47,7 @@ const Salon = () => {
           </p>
           <a
             href="#shop"
-            className="border-2 border-[#6e5a49] text-[#6e5a49] px-8 py-3 rounded-full font-semibold text-sm tracking-wider inline-flex items-center justify-center min-w-[180px] hover:bg-[#6e5a49] hover:text-white transition-all duration-300"
+            className="border-2 border-[#6e5a49] text-black px-8 py-3 rounded-full font-semibold text-sm tracking-wider inline-flex items-center justify-center min-w-[180px] hover:bg-[#6e5a49] hover:text-white transition-all duration-300"
           >
             Shop
           </a>

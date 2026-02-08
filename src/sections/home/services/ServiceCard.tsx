@@ -13,7 +13,7 @@ const ServiceCard = ({ title, image }: ServiceCardProps) => {
           className="w-full h-full object-cover"
         />
       </div>
-      <h3 className="text-2xl font-semibold text-[#3C2A21]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+      <h3 className="text-2xl font-semibold text-black" style={{ fontFamily: 'Montserrat, sans-serif' }}>
         {title}
       </h3>
     </div>

@@ -43,7 +43,7 @@ const CTAs = () => {
           </div>
           <button
             onClick={() => navigate('/prenotazione/servizi')}
-            className="relative bg-white text-[#3C2A21] m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full"
+            className="relative bg-white text-black m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full"
           >
             PRENOTA ORA
           </button>
@@ -61,7 +61,7 @@ const CTAs = () => {
           </div>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="relative bg-black text-white m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full hover:bg-[#e8dfd5] hover:text-[#3C2A21] transition-all duration-300"
+            className="relative bg-black text-white m-[2px] px-8 py-3 rounded-3xl font-semibold text-sm tracking-wider text-center leading-none flex items-center justify-center w-full hover:bg-[#e8dfd5] hover:text-black transition-all duration-300"
           >
             CONSULENZA GRATUITA
           </button>
@@ -102,7 +102,7 @@ const CTAs = () => {
               <div className="relative h-full bg-[#ece3d8] bg-opacity-90 px-6 md:px-8 py-6 flex flex-col">
                 <button
                   onClick={() => setIsFormOpen(false)}
-                  className="absolute top-4 right-4 h-8 w-8 leading-none text-[#3C2A21]"
+                  className="absolute top-4 right-4 h-8 w-8 leading-none text-black"
                   aria-label="Chiudi"
                 >
                   ✕
@@ -110,11 +110,11 @@ const CTAs = () => {
 
                 <h2
                   id="consult-title"
-                  className="text-3xl font-extrabold tracking-tight text-[#3C2A21] mb-2"
+                  className="text-3xl font-extrabold tracking-tight text-black mb-2"
                 >
                   CONSULENZA GRATUITA
                 </h2>
-                <p className="text-[15px] leading-relaxed text-[#3C2A21] mb-4">
+                <p className="text-[15px] leading-relaxed text-black mb-4">
                   Lascia i tuoi dati: ti ricontattiamo per una consulenza personalizzata.
                 </p>
 

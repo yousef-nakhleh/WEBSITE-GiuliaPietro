@@ -55,7 +55,7 @@ const CTAs = () => {
         href="https://www.instagram.com/giuliaepietroacconciature/"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-14 min-w-[220px] items-center justify-center rounded-full border-2 border-[#6e5a49] px-8 text-base font-extrabold uppercase tracking-widest text-[#6e5a49] transition-colors duration-300 hover:bg-[#6e5a49] hover:text-white"
+        className="inline-flex h-14 min-w-[220px] items-center justify-center rounded-full border-2 border-[#6e5a49] px-8 text-base font-extrabold uppercase tracking-widest text-black transition-colors duration-300 hover:bg-[#6e5a49] hover:text-white"
       >
         Instagram
       </a>

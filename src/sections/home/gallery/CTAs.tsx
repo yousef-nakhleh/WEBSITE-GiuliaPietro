@@ -4,23 +4,23 @@ const CTAs = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-6 pt-2">
+    <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
       {/* PRENOTA ORA */}
       <button
         onClick={() => navigate('/prenotazione/servizi')}
-        className="inline-flex h-14 min-w-[220px] items-center justify-center rounded-full px-8 text-base font-extrabold uppercase tracking-widest bg-[#e8dfd5] text-black hover:scale-105 transition-all duration-300"
+        className="inline-flex min-w-[150px] items-center justify-center rounded-3xl px-8 py-3 font-semibold text-sm tracking-wider bg-[#e8dfd5] text-black hover:scale-105 transition-all duration-300"
       >
-        <span>Prenota Ora</span>
+        <span>PRENOTA ORA</span>
       </button>
 
-      {/* INSTAGRAM — outline -> fill on hover */}
+      {/* INSTAGRAM */}
       <a
         href="https://www.instagram.com/giuliaepietroacconciature/"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex h-14 min-w-[220px] items-center justify-center rounded-full border-2 border-[#e8dfd5] px-8 text-base font-extrabold uppercase tracking-widest text-black transition-transform duration-300 hover:scale-105"
+        className="inline-flex min-w-[150px] items-center justify-center rounded-3xl border-2 border-[#e8dfd5] px-8 py-3 font-semibold text-sm tracking-wider text-black hover:scale-105 transition-all duration-300"
       >
-        Instagram
+        INSTAGRAM
       </a>
     </div>
   );

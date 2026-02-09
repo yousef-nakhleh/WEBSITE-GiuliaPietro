@@ -29,7 +29,7 @@ type SEOProps = {
 };
 
 const SITE_NAME = 'Giulia & Pietro Acconciature Unisex';
-const BASE_URL = 'https://epifaniodigiovanni.it';
+const BASE_URL = 'https://www.giuliaepietroacconciature.it';
 const DEFAULT_LOCALE = 'it_IT';
 const THEME_COLOR = '#DED4CA';
 const COLOR_SCHEME = 'light';
@@ -46,7 +46,7 @@ const DEFAULT_OG_IMAGE_ALT =
 // Social / profiles (for JSON-LD sameAs)
 const INSTAGRAM_URL = 'https://www.instagram.com/giuliaepietroacconciature/';
 const GOOGLE_MAPS_URL =
-  'https://www.google.com/maps?q=Piazza%20Dottor%20Emilio%20Gallavresi%2C%206%2C%2024043%20Caravaggio%20BG';
+  'https://www.google.com/maps?q=Via%20al%20Teatro%2C%206%2C%2024043%20Caravaggio%20BG';
 
 // Business details for JSON-LD
 const BUSINESS = {
@@ -55,7 +55,7 @@ const BUSINESS = {
   telephone: '+39 333 934 7932',
   logo: `${BASE_URL}/assets/logo.png`,
   address: {
-    streetAddress: 'Piazza Dottor Emilio Gallavresi, 6',
+    streetAddress: 'Via al Teatro, 6',
     addressLocality: 'Caravaggio',
     postalCode: '24043',
     addressRegion: 'BG',

@@ -9,7 +9,7 @@ const Home = () => {
       <SEO
         title="Giulia & Pietro Acconciature Unisex a Caravaggio"
         description="Giulia & Pietro Acconciature Unisex a Caravaggio (BG): tagli, colore e styling per lui e per lei."
-        canonicalUrl="https://epifaniodigiovanni.it"
+        canonicalUrl="https://www.giuliaepietroacconciature.it"
         ogImage="/assets/model.webp"
         ogImageAlt="Giulia & Pietro Acconciature Unisex a Caravaggio"
         preloadImageHref="/assets/model.webp"

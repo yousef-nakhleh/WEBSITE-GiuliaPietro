@@ -8,7 +8,7 @@ const PrivacyPolicy: React.FC = () => {
       <SEO
         title="Privacy Policy | Giulia & Pietro Acconciature Unisex"
         description="Informativa sulla privacy del sito Giulia & Pietro Acconciature Unisex: scopri come vengono trattati i tuoi dati personali e come esercitare i tuoi diritti."
-        canonicalUrl="https://epifaniodigiovanni.it/privacy"
+        canonicalUrl="https://www.giuliaepietroacconciature.it/privacy"
         robots="index, follow"
       />
 
@@ -106,8 +106,8 @@ const PrivacyPolicy: React.FC = () => {
 
         <footer className="mt-12 pt-6 border-t border-[#3C2A21]/20 text-sm opacity-80">
           <p>
-            Titolare del trattamento: Giulia &amp; Pietro Acconciature Unisex — Indirizzo: Piazza
-            Dottor Emilio Gallavresi, 6, 24043 Caravaggio (BG).
+            Titolare del trattamento: Giulia &amp; Pietro Acconciature Unisex — Indirizzo: Via al
+            Teatro, 6, 24043 Caravaggio (BG).
           </p>
         </footer>
       </div>

@@ -95,7 +95,7 @@ const timezoneGateway = createSupabaseTimezoneGateway(supabase);
 const serviceConfig = {
   seoConfig: {
     title: "Scegli un servizio | Giulia & Pietro Acconciature Unisex",
-    canonical: "https://epifaniodigiovanni.it/prenotazione/servizi",
+    canonical: "https://www.giuliaepietroacconciature.it/prenotazione/servizi",
     description: "Seleziona il servizio che vuoi prenotare.",
   },
   schemaConfig: {
@@ -116,7 +116,7 @@ const serviceConfig = {
 const staffConfig = {
   seoConfig: {
     title: "Scegli lo staff | Giulia & Pietro Acconciature Unisex",
-    canonical: "https://epifaniodigiovanni.it/prenotazione/staff",
+    canonical: "https://www.giuliaepietroacconciature.it/prenotazione/staff",
     description: "Seleziona il membro dello staff preferito.",
   },
   pageText: {
@@ -131,7 +131,7 @@ const staffConfig = {
 const slotConfig = {
   seoConfig: {
     title: "Scegli data e orario | Giulia & Pietro Acconciature Unisex",
-    canonical: "https://epifaniodigiovanni.it/prenotazione/orari",
+    canonical: "https://www.giuliaepietroacconciature.it/prenotazione/orari",
     description: "Seleziona la data e l'orario preferiti.",
   },
   pageText: {

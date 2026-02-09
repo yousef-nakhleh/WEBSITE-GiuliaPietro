@@ -15,7 +15,7 @@ const Footer = () => {
         itemType="https://schema.org/LocalBusiness"
       >
         <meta itemProp="name" content="Giulia & Pietro Acconciature Unisex" />
-        <meta itemProp="url" content="https://epifaniodigiovanni.it" />
+        <meta itemProp="url" content="https://www.giuliaepietroacconciature.it" />
 
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -103,7 +103,7 @@ const Footer = () => {
               <h3 className="text-lg font-medium mb-4">Dove Trovarci</h3>
               <div className="h-52 rounded-lg overflow-hidden shadow-md border border-[#d4c9bc]/40">
                 <iframe
-                  src="https://www.google.com/maps?q=Piazza%20Dottor%20Emilio%20Gallavresi%2C%206%2C%2024043%20Caravaggio%20BG&output=embed"
+                  src="https://www.google.com/maps?q=Via%20al%20Teatro%2C%206%2C%2024043%20Caravaggio%20BG&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

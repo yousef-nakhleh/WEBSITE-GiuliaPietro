@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './authentication/context/AuthContext';
 import { supabase } from './lib/supabaseClient';
-import { BUSINESS_ID } from './config/business'; // ✅ ADD THIS
+import { BUSINESS_ID } from './config/business';
 import { Helmet } from 'react-helmet-async';
 import useMinuteAlignedTick from './booking/slots/hooks/useMinuteAlignedTick';
 import { bookingStorage } from './utils/bookingStorage';
@@ -11,6 +11,7 @@ import Navbar from './components/static/Navbar';
 import Footer from './components/static/Footer';
 import CookieBanner from './cookies/CookieBanner';
 import AnalyticsLoader from './cookies/AnalyticsLoader';
+import { ProtectedRoute } from './components/routing/ProtectedRoute';
 
 // Pages
 import Home from './pages/Home';
@@ -175,16 +176,20 @@ const successConfig = {
 };
 
 function InnerApp() {
-  const hasSelectedService = (() => {
+  const checkHasSelectedService = () => {
     const storedServiceIds = bookingStorage.getItem('selectedServiceIds');
     const storedServiceId = bookingStorage.getItem('selectedServiceId');
     return !!(storedServiceIds || storedServiceId);
-  })();
+  };
 
-  const hasSelectedBarber = (() => {
+  const checkHasSelectedBarber = () => {
     const storedBarber = bookingStorage.getItem('selectedBarber');
     return !!storedBarber;
-  })();
+  };
+
+  const checkHasServiceAndBarber = () => {
+    return checkHasSelectedService() && checkHasSelectedBarber();
+  };
 
   return (
     <Router>
@@ -217,55 +222,56 @@ function InnerApp() {
             <Route
               path="/prenotazione/staff"
               element={
-                hasSelectedService ? (
-                  <SelectStaff
-                    supabaseClient={bookingFlowConfig.supabaseClient}
-                    businessId={bookingFlowConfig.businessId}
-                    slotSelectionRoute={bookingFlowConfig.routes.slot}
-                    SEOComponent={SEO}
-                    seoConfig={staffConfig.seoConfig}
-                    pageText={staffConfig.pageText}
-                  />
-                ) : (
-                  <Navigate to={bookingFlowConfig.routes.service} replace />
-                )
+                <ProtectedRoute
+                  guardCheck={checkHasSelectedService}
+                  redirectTo={bookingFlowConfig.routes.service}
+                  element={
+                    <SelectStaff
+                      supabaseClient={bookingFlowConfig.supabaseClient}
+                      businessId={bookingFlowConfig.businessId}
+                      slotSelectionRoute={bookingFlowConfig.routes.slot}
+                      SEOComponent={SEO}
+                      seoConfig={staffConfig.seoConfig}
+                      pageText={staffConfig.pageText}
+                    />
+                  }
+                />
               }
             />
 
             <Route
               path="/prenotazione/orari"
               element={
-                hasSelectedService && hasSelectedBarber ? (
-                  <SelectTimeSlot
-                    supabaseClient={bookingFlowConfig.supabaseClient}
-                    businessId={bookingFlowConfig.businessId}
-                    successRoute={bookingFlowConfig.routes.success}
-                    serviceSelectionRoute={bookingFlowConfig.routes.service}
-                    staffSelectionRoute={bookingFlowConfig.routes.staff}
-                    edgeFunctionName={bookingFlowConfig.edgeFunctionName}
-                    contactCheckFunctionName={bookingFlowConfig.contactCheckFunctionName}
-                    createAppointmentRpcName={bookingFlowConfig.createAppointmentRpcName}
-                    defaultTimezone={bookingFlowConfig.defaultTimezone}
-                    defaultPhonePrefix={bookingFlowConfig.defaultPhonePrefix}
-                    SEOComponent={SEO}
-                    LoginModalComponent={LoginModal}
-                    ContactPanelComponent={ContactPanel}
-                    SectionHeaderComponent={SectionHeader}
-                    LoadingSpinnerComponent={LoadingSpinner}
-                    useAuthHook={useAuth}
-                    seoConfig={slotConfig.seoConfig}
-                    pageText={slotConfig.pageText}
-                  />
-                ) : (
-                  <Navigate
-                    to={
-                      hasSelectedService
-                        ? bookingFlowConfig.routes.staff
-                        : bookingFlowConfig.routes.service
-                    }
-                    replace
-                  />
-                )
+                <ProtectedRoute
+                  guardCheck={checkHasServiceAndBarber}
+                  redirectTo={
+                    checkHasSelectedService()
+                      ? bookingFlowConfig.routes.staff
+                      : bookingFlowConfig.routes.service
+                  }
+                  element={
+                    <SelectTimeSlot
+                      supabaseClient={bookingFlowConfig.supabaseClient}
+                      businessId={bookingFlowConfig.businessId}
+                      successRoute={bookingFlowConfig.routes.success}
+                      serviceSelectionRoute={bookingFlowConfig.routes.service}
+                      staffSelectionRoute={bookingFlowConfig.routes.staff}
+                      edgeFunctionName={bookingFlowConfig.edgeFunctionName}
+                      contactCheckFunctionName={bookingFlowConfig.contactCheckFunctionName}
+                      createAppointmentRpcName={bookingFlowConfig.createAppointmentRpcName}
+                      defaultTimezone={bookingFlowConfig.defaultTimezone}
+                      defaultPhonePrefix={bookingFlowConfig.defaultPhonePrefix}
+                      SEOComponent={SEO}
+                      LoginModalComponent={LoginModal}
+                      ContactPanelComponent={ContactPanel}
+                      SectionHeaderComponent={SectionHeader}
+                      LoadingSpinnerComponent={LoadingSpinner}
+                      useAuthHook={useAuth}
+                      seoConfig={slotConfig.seoConfig}
+                      pageText={slotConfig.pageText}
+                    />
+                  }
+                />
               }
             />
 
